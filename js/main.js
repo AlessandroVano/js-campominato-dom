@@ -43,6 +43,7 @@ Al termine della partita il software deve scoprire tutte le bombe e comunicare i
       19. invochiamo la funzione della generazione numero bombe
       20. creiamo un array per tenere traccia di quanti tentativi sono andati a buon fine
       21. funzione per gestire i click sulle celle
+      22. funzione per gestire la vittoria o la sconfitta, facendo comparire una scritta in tutti e due i casi
           
 
 
@@ -160,16 +161,20 @@ setBtn.addEventListener('click', () => {
            console.log(numero);
           //  b) bomba colpita
           if(listaBombe.includes(numero)) {
+               // 22. INVOCAZIONE funzione per gestire la sconfitta
+            fineDelGioco(listaBombe, tentativi, tentativiMassimi)
               console.log('bomba beccata');
               //  c) numero non cliccato in precedenza e non una bomba (usando ! in questo caso prima di tentativi)
           } else if (!tentativi.includes(numero)) {
-              // aggiunta colore del quadratino
+              // d) aggiunta colore del quadratino
               square.classList.add('safe');
-              // aggiugere numero alla lista tentativi fatti
+              // e) aggiugere numero alla lista tentativi fatti
               tentativi.push(numero);
               console.log('Tentativi andati a buon fine', tentativi);
-              // controllo se numero tentativi è uguale al numero massimo di tentativi possibili
+              // f) controllo se numero tentativi è uguale al numero massimo di tentativi possibili
               if (tentativi.length === tentativiMassimi) {
+                  // 22. INVOCAZIONE funzione per gestire la vittoria
+                fineDelGioco(listaBombe, tentativi, tentativiMassimi)
                   console.log('vittoria, hai selezionato tutte le caselle safe senza trovarne una con la bomba');
 
               }
@@ -177,6 +182,17 @@ setBtn.addEventListener('click', () => {
           
        }
 
+                            /*************************************** SEZIONE FUNZIONI ***************************************************** */
+
+
+
+
+      // 22. funzione per gestire la vittoria o la sconfitta, facendo comparire una scritta in tutti e due i casi
+        function fineDelGioco(listaBombe, tentativi, tentativiMassimi) {
+            // a) ottenere tutti i quadratini rossi se becchiamo una bomba( fine del gioco perdendo)
+            const quadratini = document.querySelectorAll('.square');
+            console.log(quadratini);
+        }
 
 
 
