@@ -27,11 +27,24 @@ Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro.
   15. creazione variabile con il numerino che cambierà ogni volta
   16. creazione evento per cambiare il quadratino una volta cliccato
   17. rendere visibile i quadratini (con i numeri in cascata già da prima nel DOM)
-
-
-
-
  */
+
+
+  /**
+   * Il computer deve generare 16 numeri casuali nello stesso range della difficoltà prescelta: le bombe.
+I numeri nella lista delle bombe non possono essere duplicati.
+In seguito l’utente clicca su ogni cella: se il numero è presente nella lista dei numeri generati - abbiamo calpestato una bomba - la cella si colora di rosso e la partita termina, altrimenti la cella cliccata si colora di azzurro e l’utente può continuare a cliccare sulle altre celle.
+La partita termina quando il giocatore clicca su una bomba o raggiunge il numero massimo possibile di numeri consentiti.
+Al termine della partita il software deve scoprire tutte le bombe e comunicare il punteggio, cioè il numero di volte che l’utente ha inserito un numero consentito.
+
+   */
+
+
+
+
+
+
+
 // 1. inserimento const del bottone 'gioca'
 const setBtn = document.getElementById('imposta-difficolta');
 console.log(setBtn);
