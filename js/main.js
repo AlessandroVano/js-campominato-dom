@@ -37,6 +37,15 @@ In seguito l’utente clicca su ogni cella: se il numero è presente nella lista
 La partita termina quando il giocatore clicca su una bomba o raggiunge il numero massimo possibile di numeri consentiti.
 Al termine della partita il software deve scoprire tutte le bombe e comunicare il punteggio, cioè il numero di volte che l’utente ha inserito un numero consentito.
 
+      lista cose da fare in sequenza:
+
+      18. Generazione tramite computer di 16 bombe random in numeri che vanno da 1 a 100, non far duplicare i numeri
+          a) Creo una funzione
+          b) creo una costante per creare le 16 bombe randomiche 
+
+
+
+
    */
 
 
@@ -122,7 +131,18 @@ setBtn.addEventListener('click', () => {
 
 
 
+//  18. Generazione tramite computer di 16 bombe random in numeri che vanno da 1 a 100, non far duplicare i numeri
 
+       // a) Creo una funzione
+       function bombeGenerate(nBombe) {
+           // b) creo una costante per creare le 16 bombe randomiche 
+           const bombe = [];
+           // c) uso while (con l'attributo length) e non for per far si che non rigeneri un numero creato prima (usando for avremmo dovuto mettere un if per eliminare questa ipotesi)
+           while(bombe.length < nBombe) {
+               
+           }
+       }
+    
 
 
 
