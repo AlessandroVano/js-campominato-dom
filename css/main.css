@@ -61,6 +61,17 @@ body {
     cursor: pointer;
 }
 
-.square.clicked {
-    background: lightblue;
+.square.safe,
+.square.bomb {
+    color: white;
+    cursor: default;
+}
+
+
+.square.safe {
+    background: rgb(29, 170, 218);
+}
+
+.square.bomb {
+    background: red;
 }

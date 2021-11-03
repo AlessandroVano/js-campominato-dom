@@ -161,8 +161,10 @@ setBtn.addEventListener('click', () => {
           //  b) bomba colpita
           if(listaBombe.includes(numero)) {
               console.log('bomba beccata');
+              //  c) numero non cliccato in precedenza e non una bomba (usando ! in questo caso prima di tentativi)
+          } else if (!tentativi.includes(numero)) {
               
-          } 
+          }
           
        }
 
