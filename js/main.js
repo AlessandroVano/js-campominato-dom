@@ -163,7 +163,10 @@ setBtn.addEventListener('click', () => {
               console.log('bomba beccata');
               //  c) numero non cliccato in precedenza e non una bomba (usando ! in questo caso prima di tentativi)
           } else if (!tentativi.includes(numero)) {
-              
+              // aggiunta colore del quadratino
+              square.classList.add('safe');
+              // aggiugere numero alla lista tentativi fatti
+              // controllo se numero tentativi è uguale al numero massimo di tentativi possibili
           }
           
        }
