@@ -166,6 +166,8 @@ setBtn.addEventListener('click', () => {
               // aggiunta colore del quadratino
               square.classList.add('safe');
               // aggiugere numero alla lista tentativi fatti
+              tentativi.push(numero);
+              console.log('Tentativi andati a buon fine', tentativi);
               // controllo se numero tentativi è uguale al numero massimo di tentativi possibili
           }
           
