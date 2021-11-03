@@ -189,9 +189,20 @@ setBtn.addEventListener('click', () => {
 
       // 22. funzione per gestire la vittoria o la sconfitta, facendo comparire una scritta in tutti e due i casi
         function fineDelGioco(listaBombe, tentativi, tentativiMassimi) {
-            // a) ottenere tutti i quadratini rossi se becchiamo una bomba( fine del gioco perdendo)
+            // a) ottenere tutti i quadratini 
             const quadratini = document.querySelectorAll('.square');
             console.log(quadratini);
+            // b) ottenere tutti i quadratini rossi se becchiamo una bomba( fine del gioco perdendo)
+            for( let i = 0; i < quadratini.length; i++) {
+                const quadratoBomba = quadratini[i];
+                const numeroQuadrato = parseInt(quadratoBomba.innerHTML);
+
+                if(listaBombe.includes(numeroQuadrato)){
+                    quadratoBomba.classList.add('bomb');
+
+                }
+            }
+
         }
 
 
