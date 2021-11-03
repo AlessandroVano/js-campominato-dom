@@ -41,6 +41,7 @@ Al termine della partita il software deve scoprire tutte le bombe e comunicare i
 
       18. Generazione tramite computer di 16 bombe random in numeri che vanno da 1 a 100, non far duplicare i numeri
       19. invochiamo la funzione della generazione numero bombe
+      20. creiamo un array per tenere traccia di quanti tentativi sono andati a buon fine
           
 
 
@@ -104,6 +105,13 @@ setBtn.addEventListener('click', () => {
     // 19. invochiamo la funzione della generazione numero bombe
     const listaBombe = bombeGenerate( numeroCelle, 16)
     console.log('Bombe', listaBombe);
+
+    //20. creiamo un array per tenere traccia di quanti tentativi sono andati a buon fine
+       const tentativi = [];
+       // a) numero massimo di tentativi x vincere
+       const tentativiMassimi = numeroCelle - listaBombe.length;
+       console.log('Numero massimo di tentativi', tentativiMassimi);
+
 
     // 9. Generazione griglia padre dove inseriremo le griglie figlie  inseriamo una costante per creare un elemento (questo è un nodo elaborato con una classe)
     const grigliaJS = document.createElement('div');
