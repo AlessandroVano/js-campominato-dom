@@ -158,7 +158,12 @@ setBtn.addEventListener('click', () => {
            // a) ottenimento numero quadrato cliccato
            const numero = parseInt(square.innerHTML);
            console.log(numero);
-      
+          //  b) bomba colpita
+          if(listaBombe.includes(numero)) {
+              console.log('bomba beccata');
+              
+          } 
+          
        }
 
 
