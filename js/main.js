@@ -40,8 +40,8 @@ Al termine della partita il software deve scoprire tutte le bombe e comunicare i
       lista cose da fare in sequenza:
 
       18. Generazione tramite computer di 16 bombe random in numeri che vanno da 1 a 100, non far duplicare i numeri
-          a) Creo una funzione
-          b) creo una costante per creare le 16 bombe randomiche 
+      19. invochiamo la funzione della generazione numero bombe
+          
 
 
 
@@ -100,6 +100,11 @@ setBtn.addEventListener('click', () => {
     console.log(numeroCelle);
     console.log(cellePerLato);
 
+
+    // 19. invochiamo la funzione della generazione numero bombe
+    const listaBombe = bombeGenerate( numeroCelle, 16)
+    console.log('Bombe', listaBombe);
+
     // 9. Generazione griglia padre dove inseriremo le griglie figlie  inseriamo una costante per creare un elemento (questo è un nodo elaborato con una classe)
     const grigliaJS = document.createElement('div');
     grigliaJS.classList.add('grigliaJS');
@@ -134,13 +139,26 @@ setBtn.addEventListener('click', () => {
 //  18. Generazione tramite computer di 16 bombe random in numeri che vanno da 1 a 100, non far duplicare i numeri
 
        // a) Creo una funzione
-       function bombeGenerate(nBombe) {
+       function bombeGenerate( celleTotali, nBombe) {
            // b) creo una costante per creare le 16 bombe randomiche 
            const bombe = [];
-           // c) uso while (con l'attributo length) e non for per far si che non rigeneri un numero creato prima (usando for avremmo dovuto mettere un if per eliminare questa ipotesi)
+           // c) uso while (con l'attributo length) e non for per far si che non rigeneri un numero creato prima 
            while(bombe.length < nBombe) {
+               // d) invocazione numeroRandom all'interno della funzione bombe generate
+               const bomba = numeroRandom( 1, celleTotali); 
+               if (!bombe.includes(bomba)) {
+                   bombe.push(bomba);
+               }
                
            }
+           return bombe;
+       }
+
+
+
+       // c) creo una funzione per i numeri random delle bombe (numeri non univoci)
+       function numeroRandom(numeroMinimo, numeroMassimo) {
+           return Math.floor( Math.random() * (numeroMassimo - numeroMinimo + 1) ) + numeroMinimo;
        }
     
 
