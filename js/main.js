@@ -169,6 +169,10 @@ setBtn.addEventListener('click', () => {
               tentativi.push(numero);
               console.log('Tentativi andati a buon fine', tentativi);
               // controllo se numero tentativi è uguale al numero massimo di tentativi possibili
+              if (tentativi.length === tentativiMassimi) {
+                  console.log('vittoria, hai selezionato tutte le caselle safe senza trovarne una con la bomba');
+
+              }
           }
           
        }
