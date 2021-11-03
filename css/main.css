@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* UTILITIES */
+header {
+    background: white;
+}
+
+
+body {
+    background: cadetblue;
+}
+
+/* HEADER section */
+.toolbar {
+    display: flex;
+    margin-bottom: 3rem;
+    padding: 1rem;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 1rem;
+}
+
+.div-1 {
+     display: flex; 
+} 
+.div-2 {
+    margin-top: 0.8rem;
+} 
+
+
+/* MAIN section */
+/* (griglia di quadratini) */
+
+.griglia h2 {
+    text-align: center;
+}
+
+.grigliaJS {
+    display: flex;
+    flex-wrap: wrap;
+    width:  600px;
+    height: 600px;
+    margin: 60px auto;
+    border: 3px solid white;
+
+}
+
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.square.clicked {
+    background: lightblue;
+}
