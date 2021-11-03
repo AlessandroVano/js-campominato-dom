@@ -42,6 +42,7 @@ Al termine della partita il software deve scoprire tutte le bombe e comunicare i
       18. Generazione tramite computer di 16 bombe random in numeri che vanno da 1 a 100, non far duplicare i numeri
       19. invochiamo la funzione della generazione numero bombe
       20. creiamo un array per tenere traccia di quanti tentativi sono andati a buon fine
+      21. funzione per gestire i click sulle celle
           
 
 
@@ -129,7 +130,9 @@ setBtn.addEventListener('click', () => {
     
      // 16. creazione evento per cambiare il quadratino una volta cliccato
      square.addEventListener('click', () => {
-         square.classList.add('clicked');
+       /*   square.classList.add('clicked'); */
+       // 21. funzione per gestire i click sulle celle (invocazione)
+       gestioneClickQuadratini(square, listaBombe,tentativi, tentativiMassimi)
      });
 
 
@@ -144,7 +147,24 @@ setBtn.addEventListener('click', () => {
 
 
 
-//  18. Generazione tramite computer di 16 bombe random in numeri che vanno da 1 a 100, non far duplicare i numeri
+
+
+
+
+
+
+      // 21. funzione per gestire i click sulle celle 
+       function gestioneClickQuadratini(square, listaBombe,tentativi, tentativiMassimi) {
+           // a) ottenimento numero quadrato cliccato
+           const numero = parseInt(square.innerHTML);
+           console.log(numero);
+      
+       }
+
+
+
+
+     //  18. Generazione tramite computer di 16 bombe random in numeri che vanno da 1 a 100, non far duplicare i numeri
 
        // a) Creo una funzione
        function bombeGenerate( celleTotali, nBombe) {
