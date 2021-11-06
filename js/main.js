@@ -45,6 +45,7 @@ Al termine della partita il software deve scoprire tutte le bombe e comunicare i
       21. funzione per gestire i click sulle celle
       22. funzione per gestire la vittoria o la sconfitta, facendo comparire una scritta in tutti e due i casi
       23. Inserimento testo sotto griglia in caso di vittoria o in caso di sconfitta
+      24. non rendere più cliccabili le nostre caselle dopo che si trova una bomba
 
 
 
@@ -221,6 +222,10 @@ setBtn.addEventListener('click', () => {
             document.querySelector('.griglia').append(messaggio);
 
         }
+
+
+        // 24. non rendere più cliccabili le nostre caselle dopo che si trova una bomba
+        document.querySelector('.grigliaJS').classList.add('finegioco');
 
 
 
